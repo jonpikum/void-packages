@@ -4,6 +4,7 @@ version=2.7.4
 revision=1
 build_style=python3-module
 depends="python3-ply"
+makedepends="python3-setuptools"
 short_desc="C++ header parser for Python3"
 maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
 license="BSD-3-Clause"
