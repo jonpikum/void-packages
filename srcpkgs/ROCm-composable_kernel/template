@@ -1,13 +1,13 @@
 # Template file for 'ROCm-composable_kernel'
 pkgname=ROCm-composable_kernel
-version=5.6.0
+version=6.0.0
 revision=1
-_commit="d3adc665819dc0535a9f710ee7b8190ce85b3245"
+_commit="52b0bffec00772a4c1c8751232fa034ebb9310be"
 archs="x86_64"
 build_style=cmake
 configure_args="-DBUILD_DEV=OFF -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc -DCMAKE_C_COMPILER=/opt/rocm/bin/hipcc -DCMAKE_INSTALL_PREFIX=/opt/rocm -DCMAKE_PREFIX_PATH=/opt/rocm -DCMAKE_INSTALL_LIBDIR=lib -DGPU_TARGETS=$(vopt_if gfx803 'gfx803;')$(vopt_if gfx900 'gfx900;')$(vopt_if gfx906 'gfx906;')$(vopt_if gfx908 'gfx908;')$(vopt_if gfx90a 'gfx90a;')$(vopt_if gfx1030 'gfx1030;')"
 hostmakedepends="rocm-llvm hipamd"
-makedepends="rocm-cmake ROCm-Device-Libs rocm-llvm-openmp"
+makedepends="rocm-cmake ROCm-Device-Libs rocm-llvm-openmp git"
 depends="ROCm-core"
 short_desc="ROCm Composable Kernel"
 maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
@@ -15,7 +15,7 @@ license="MIT"
 homepage="https://github.com/ROCmSoftwarePlatform/composable_kernel"
 changelog="https://github.com/ROCmSoftwarePlatform/composable_kernel/raw/develop/CHANGELOG.md"
 distfiles="https://github.com/ROCmSoftwarePlatform/composable_kernel/archive/${_commit}.tar.gz"
-checksum=4bf2424c45ef2c4a46a47a89797c0fa0e382df34896f93d13a21374e047d6724
+checksum=7d260b86a7eded8712038aeb86727b04f729a5c491a8bc4cb792500d49c50b50
 LDFLAGS=-L/opt/rocm/lib
 
 # GPU architectures to build for

@@ -1,10 +1,10 @@
 # Template file for 'hipFFT'
 pkgname=hipFFT
-version=5.6.0
+version=6.0.0
 revision=1
 archs="x86_64"
 build_style=cmake
-configure_args="-DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc -DHIP_ROOT_DIR=/opt/rocm/hip -DCMAKE_INSTALL_PREFIX=/opt/rocm -DCMAKE_INSTALL_LIBDIR=lib -DAMDGPU_TARGETS=$(vopt_if gfx803 'gfx803;')$(vopt_if gfx900 'gfx900;')$(vopt_if gfx906 'gfx906;')$(vopt_if gfx908 'gfx908;')$(vopt_if gfx90a 'gfx90a;')$(vopt_if gfx1010 'gfx1010;')$(vopt_if gfx1011 'gfx1011;')$(vopt_if gfx1012 'gfx1012;')$(vopt_if gfx1030 'gfx1030;')$(vopt_if gfx1031 'gfx1031;')$(vopt_if gfx1100 'gfx1100;')$(vopt_if gfx1101 'gfx1101;')$(vopt_if gfx1102 'gfx1102;')"
+configure_args="-Wno-dev -B . -S /builddir/${pkgname}-${version}/hipFFT-rocm-${version} -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc -DHIP_ROOT_DIR=/opt/rocm/hip -DCMAKE_INSTALL_PREFIX=/opt/rocm -DCMAKE_INSTALL_LIBDIR=lib -DAMDGPU_TARGETS=$(vopt_if gfx803 'gfx803;')$(vopt_if gfx900 'gfx900;')$(vopt_if gfx906 'gfx906;')$(vopt_if gfx908 'gfx908;')$(vopt_if gfx90a 'gfx90a;')$(vopt_if gfx1010 'gfx1010;')$(vopt_if gfx1011 'gfx1011;')$(vopt_if gfx1012 'gfx1012;')$(vopt_if gfx1030 'gfx1030;')$(vopt_if gfx1031 'gfx1031;')$(vopt_if gfx1100 'gfx1100;')$(vopt_if gfx1101 'gfx1101;')$(vopt_if gfx1102 'gfx1102;')"
 hostmakedepends="rocm-llvm hipamd git"
 makedepends="rocm-cmake ROCm-Device-Libs rocFFT"
 depends="ROCm-core"
@@ -13,13 +13,20 @@ maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
 license="MIT"
 homepage="https://github.com/ROCmSoftwarePlatform/hipFFT"
 changelog="https://github.com/ROCmSoftwarePlatform/hipFFT/raw/develop/CHANGELOG.md"
-distfiles="https://github.com/ROCmSoftwarePlatform/hipFFT/archive/rocm-${version}.tar.gz"
-checksum=c7f425b693caf9371b42226d86392335d993a117d23219b6ba1fd13523cb8261
+distfiles="https://github.com/ROCmSoftwarePlatform/hipFFT/archive/rocm-${version}.tar.gz>hipFFT.tar.gz
+https://github.com/ROCmSoftwarePlatform/rocFFT/archive/rocm-${version}.tar.gz>rocFFT.tar.gz"
+checksum="44f328b7862c066459089dfe62833cb7d626c6ceb71c57d8c7d6bba45dad491e
+fb8ba56572702e77e4383d922cd1fee4ad3fa5f63a5ebdb3d9c354439a446992"
 
 build_options="gfx803 gfx900 gfx906 gfx908 gfx90a gfx1010 gfx1011 gfx1012 gfx1030 gfx1031 gfx1100 gfx1101 gfx1102"
 
 build_options_default="gfx803 gfx900 gfx906 gfx908 gfx90a gfx1010 gfx1011 gfx1012 gfx1030 gfx1031 gfx1100 gfx1101 gfx1102"
 
+pre_build() {
+	rm -r ${wrksrc}/hipFFT-rocm-${version}/clients/rocFFT
+	ln -s ${wrksrc}/rocFFT-rocm-${version} ${wrksrc}/hipFFT-rocm-${version}/clients/rocFFT
+}
+
 post_install() {
-	vlicense LICENSE.md
+	vlicense hipFFT-rocm-${version}/LICENSE.md
 }

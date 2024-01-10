@@ -1,6 +1,6 @@
 # Template file for 'hipamd'
 pkgname=hipamd
-version=5.6.0
+version=6.0.0
 revision=1
 archs="x86_64"
 build_style=cmake
@@ -15,9 +15,9 @@ homepage="https://github.com/ROCm-Developer-Tools/HIP"
 distfiles="https://github.com/ROCm-Developer-Tools/HIP/archive/rocm-${version}.tar.gz>hip.tar.gz
 https://github.com/ROCm-Developer-Tools/clr/archive/rocm-${version}.tar.gz>clr.tar.gz
 https://github.com/ROCm-Developer-Tools/HIPCC/archive/rocm-${version}.tar.gz>hipcc.tar.gz"
-checksum="a8237768c1ae70029d972376f8d279f4de18a1e6106fff6215d1e16847bc375e
-8dcd99110737a294f67a805639cf372890c8ca16c7603caaa793e71e84478fe4
-fdb7fdc9e4648376120330f034ee8353038d34c8a015f9eb0c208c56eeddd097"
+checksum="0d575788e0b731124a8489a36652014a165b9ebab92d5456ec3c976e062f3a82
+798b55b5b5fb90dd19db54f136d8d8e1da9ae1e408d5b12b896101d635f97e50
+e9cfaaecaf0e6ed363946439197f340c115e8e1189f96dbd716cf20245c29255"
 python_version=3
 
 pre_configure() {

@@ -1,6 +1,6 @@
 # Template file for 'rocBLAS'
 pkgname=rocBLAS
-version=5.6.0
+version=6.0.0
 revision=1
 archs="x86_64"
 build_style=cmake
@@ -19,7 +19,7 @@ configure_args="-B .
 				-DTensile_TEST_LOCAL_PATH=../Tensile-rocm-${version}
 				-DAMDGPU_TARGETS=$(vopt_if gfx803 'gfx803;')$(vopt_if gfx900 'gfx900;')$(vopt_if gfx906 'gfx906;')$(vopt_if gfx908 'gfx908;')$(vopt_if gfx90a 'gfx90a;')$(vopt_if gfx1010 'gfx1010;')$(vopt_if gfx1011 'gfx1011;')$(vopt_if gfx1012 'gfx1012;')$(vopt_if gfx1030 'gfx1030;')$(vopt_if gfx1031 'gfx1031;')$(vopt_if gfx1100 'gfx1100;')$(vopt_if gfx1101 'gfx1101;')$(vopt_if gfx1102 'gfx1102;')"
 hostmakedepends="hipamd rocm-llvm perl python3"
-makedepends="ROCm-Device-Libs ROCm-CompilerSupport msgpack-cxx msgpack-devel python3-msgpack python3-yaml python3-joblib rocm-cmake"
+makedepends="ROCm-Device-Libs ROCm-CompilerSupport msgpack-cxx msgpack-devel python3-msgpack python3-yaml python3-joblib rocm-cmake python3-setuptools"
 depends="ROCm-core"
 short_desc="BLAS implementation for ROCm platform with Tensile"
 maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
@@ -28,8 +28,8 @@ homepage="https://github.com/ROCmSoftwarePlatform/rocBLAS"
 changelog="https://github.com/ROCmSoftwarePlatform/rocBLAS/raw/develop/CHANGELOG.md"
 distfiles="https://github.com/ROCmSoftwarePlatform/rocBLAS/archive/rocm-${version}.tar.gz>rocblas.tar.gz
 https://github.com/ROCmSoftwarePlatform/Tensile/archive/rocm-${version}.tar.gz>tensile.tar.gz"
-checksum="6a70b27eede02c45f46095a6ce8421af9a774a565e39f5e1074783ecf00c1ea7
-383728ecf49def59ab9a7f8a1d1e2eaf8b528e36b461e27030a2aab1a1ed80cb"
+checksum="befa4a75f1de0ea37f2358d4c2de5406d7bce671ca9936e2294b64d3b3bafb60
+5d90add62d1439b7daf0527316e950e454e5d8beefb4f723865fe9ab26c7aa42"
 
 # Needed for hipcc to find libamdhip64
 LDFLAGS=-L/opt/rocm/lib

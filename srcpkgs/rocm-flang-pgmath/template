@@ -1,6 +1,6 @@
 # Template file for 'rocm-flang-pgmath'
 pkgname=rocm-flang-pgmath
-version=5.6.0
+version=6.0.0
 revision=1
 archs="x86_64"
 build_style=cmake
@@ -12,7 +12,7 @@ maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
 license="custom:Proprietary"
 homepage="https://github.com/ROCm-Developer-Tools/flang"
 distfiles="https://github.com/ROCm-Developer-Tools/flang/archive/rocm-${version}.tar.gz"
-checksum=
+checksum=fcb319ddb2aa3004a6ae60370ab4425f529336b1cee50f29200e697e61b53586
 
 do_configure() {
 	if [ ! -d build ]; then
