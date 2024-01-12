@@ -4,7 +4,7 @@ version=6.0.0
 revision=1
 archs="x86_64"
 build_style=cmake
-configure_args="-DCMAKE_PREFIX_PATH=/opt/rocm -DROCM_DIR=/opt/rocm -DCMAKE_BUILD_TYPE=Release -DROCRTST_BLD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rocm -DCMAKE_INSTALL_LIBDIR=lib -DROCRTST_BLD_BITS=64"
+configure_args="-DCMAKE_PREFIX_PATH=/opt/rocm -DCMAKE_BUILD_TYPE=Release -DROCRTST_BLD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/rocm -DCMAKE_INSTALL_LIBDIR=lib"
 makedepends="ROCR-Runtime ROCT-Thunk-Interface"
 depends="ROCm-core"
 short_desc="ROCm Application for Reporting System Info"
@@ -13,4 +13,3 @@ license="NCSA"
 homepage="https://github.com/RadeonOpenCompute/rocminfo"
 distfiles="https://github.com/RadeonOpenCompute/rocminfo/archive/rocm-${version}.tar.gz"
 checksum=bc29f1798644b6dea73895353dffada9db7366d0058274e587ebd3291a4d3844
-LDFLAGS=-L/opt/rocm/lib
