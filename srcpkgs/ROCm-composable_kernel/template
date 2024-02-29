@@ -1,6 +1,6 @@
 # Template file for 'ROCm-composable_kernel'
 pkgname=ROCm-composable_kernel
-version=6.0.0
+version=6.0.2
 revision=1
 _commit="52b0bffec00772a4c1c8751232fa034ebb9310be"
 archs="x86_64"

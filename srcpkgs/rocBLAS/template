@@ -1,7 +1,7 @@
 # Template file for 'rocBLAS'
 pkgname=rocBLAS
 version=6.0.0
-revision=1
+revision=5
 archs="x86_64"
 build_style=cmake
 configure_args="-B .
@@ -29,7 +29,7 @@ changelog="https://github.com/ROCmSoftwarePlatform/rocBLAS/raw/develop/CHANGELOG
 distfiles="https://github.com/ROCmSoftwarePlatform/rocBLAS/archive/rocm-${version}.tar.gz>rocblas.tar.gz
 https://github.com/ROCmSoftwarePlatform/Tensile/archive/rocm-${version}.tar.gz>tensile.tar.gz"
 checksum="befa4a75f1de0ea37f2358d4c2de5406d7bce671ca9936e2294b64d3b3bafb60
-5d90add62d1439b7daf0527316e950e454e5d8beefb4f723865fe9ab26c7aa42"
+ 5d90add62d1439b7daf0527316e950e454e5d8beefb4f723865fe9ab26c7aa42"
 
 # Needed for hipcc to find libamdhip64
 LDFLAGS=-L/opt/rocm/lib

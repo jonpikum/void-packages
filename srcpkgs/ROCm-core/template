@@ -5,8 +5,8 @@
 pkgname=ROCm-core
 _major_ver=6
 _minor_ver=0
-_patch_ver=0
-_magic_ver=91
+_patch_ver=2
+_magic_ver=115
 version=${_major_ver}.${_minor_ver}.${_patch_ver}
 revision=1
 archs="x86_64"

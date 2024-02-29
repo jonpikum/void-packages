@@ -1,7 +1,7 @@
 # Template file for 'rocSOLVER'
 pkgname=rocSOLVER
-version=6.0.0
-revision=1
+version=6.0.2
+revision=2
 archs="x86_64"
 build_style=cmake
 configure_args="-DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc -DCMAKE_INSTALL_PREFIX=/opt/rocm -DCMAKE_INSTALL_LIBDIR=lib -DAMDGPU_TARGETS=$(vopt_if gfx803 'gfx803;')$(vopt_if gfx900 'gfx900;')$(vopt_if gfx906 'gfx906;')$(vopt_if gfx908 'gfx908;')$(vopt_if gfx90a 'gfx90a;')$(vopt_if gfx1010 'gfx1010;')$(vopt_if gfx1011 'gfx1011;')$(vopt_if gfx1012 'gfx1012;')$(vopt_if gfx1030 'gfx1030;')$(vopt_if gfx1031 'gfx1031;')$(vopt_if gfx1100 'gfx1100;')$(vopt_if gfx1101 'gfx1101;')$(vopt_if gfx1102 'gfx1102;')"
@@ -14,7 +14,7 @@ license="BSD-2-Clause"
 homepage="https://github.com/ROCmSoftwarePlatform/rocSOLVER"
 changelog="https://github.com/ROCmSoftwarePlatform/rocSOLVER/raw/develop/CHANGELOG.md"
 distfiles="https://github.com/ROCmSoftwarePlatform/rocSOLVER/archive/rocm-${version}.tar.gz"
-checksum=5fcaba96f3efafc2ecc3f4ec104095d96545c16e1b9f95410bd571cb0fc643ae
+checksum=781d5df2886ab0d5087a215a33ac390dd27653b2a9b4a620c7d51b0ae56f63d2
 LDFLAGS=-L/opt/rocm/lib
 
 build_options="gfx803 gfx900 gfx906 gfx908 gfx90a gfx1010 gfx1011 gfx1012 gfx1030 gfx1031 gfx1100 gfx1101 gfx1102"

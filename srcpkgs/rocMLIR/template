@@ -1,6 +1,6 @@
 # Template file for 'rocMLIR'
 pkgname=rocMLIR
-version=6.0.0
+version=6.0.2
 _major_ver=5
 _minor_ver=6
 revision=1

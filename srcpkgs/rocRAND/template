@@ -17,7 +17,7 @@ changelog="https://github.com/ROCmSoftwarePlatform/rocRAND/raw/develop/CHANGELOG
 distfiles="https://github.com/ROCmSoftwarePlatform/rocRAND/archive/rocm-${version}.tar.gz>rocrand.tar.gz
 https://github.com/ROCmSoftwarePlatform/hipRAND/archive/${_hiprand_commit}.tar.gz>hiprand.tar.gz"
 checksum="cee93231c088be524bb2cb0e6093ec47e62e61a55153486bebbc2ca5b3d49360
-1bba3f817570488199920b8ff3e17c63c4f204ef5f6e47fe994ab0728b73037c"
+ 1bba3f817570488199920b8ff3e17c63c4f204ef5f6e47fe994ab0728b73037c"
 LDFLAGS=-L/opt/rocm/lib
 
 build_options="gfx803 gfx900 gfx906 gfx908 gfx90a gfx1010 gfx1011 gfx1012 gfx1030 gfx1031 gfx1100 gfx1101 gfx1102"

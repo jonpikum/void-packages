@@ -16,8 +16,8 @@ distfiles="https://github.com/ROCm-Developer-Tools/HIP/archive/rocm-${version}.t
 https://github.com/ROCm-Developer-Tools/clr/archive/rocm-${version}.tar.gz>clr.tar.gz
 https://github.com/ROCm-Developer-Tools/HIPCC/archive/rocm-${version}.tar.gz>hipcc.tar.gz"
 checksum="0d575788e0b731124a8489a36652014a165b9ebab92d5456ec3c976e062f3a82
-798b55b5b5fb90dd19db54f136d8d8e1da9ae1e408d5b12b896101d635f97e50
-e9cfaaecaf0e6ed363946439197f340c115e8e1189f96dbd716cf20245c29255"
+ 798b55b5b5fb90dd19db54f136d8d8e1da9ae1e408d5b12b896101d635f97e50
+ e9cfaaecaf0e6ed363946439197f340c115e8e1189f96dbd716cf20245c29255"
 python_version=3
 
 pre_configure() {

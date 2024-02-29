@@ -1,6 +1,6 @@
 # Template file for 'rocm-flang'
 pkgname=rocm-flang
-version=6.0.0
+version=6.0.2
 revision=1
 archs="x86_64"
 build_style=cmake
@@ -13,7 +13,7 @@ maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
 license="Apache-2.0 WITH LLVM-exception"
 homepage="https://github.com/ROCm-Developer-Tools/flang"
 distfiles="https://github.com/ROCm-Developer-Tools/flang/archive/rocm-${version}.tar.gz"
-checksum=fcb319ddb2aa3004a6ae60370ab4425f529336b1cee50f29200e697e61b53586
+checksum=8e6469415880bb068d788596b3ed713a24495eb42788f98cca92e73a2998f703
 
 post_install() {
 	vlicense LICENSE.txt

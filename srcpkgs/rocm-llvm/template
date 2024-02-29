@@ -1,6 +1,6 @@
 # Template file for 'rocm-llvm'
 pkgname=rocm-llvm
-version=6.0.0
+version=6.0.2
 revision=1
 archs="x86_64"
 build_style=cmake
@@ -13,7 +13,7 @@ maintainer="Erick Vilcica <erick.vilcica@protonmail.com>"
 license="Apache-2.0 WITH LLVM-exception"
 homepage="https://github.com/RadeonOpenCompute/llvm-project"
 distfiles="https://github.com/RadeonOpenCompute/llvm-project/archive/rocm-${version}.tar.gz"
-checksum=c673708d413d60ca8606ee75c77e9871b6953c59029c987b92f2f6e85f683626
+checksum=7d35acc84de1adee65406f92a369a30364703f84279241c444cd93a48c7eeb76
 python_version=3
 nocross=yes
 
