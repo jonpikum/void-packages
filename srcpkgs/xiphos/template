@@ -1,0 +1,17 @@
+# Template file for 'xiphos'
+pkgname=xiphos
+version=4.3.1
+revision=1
+build_style=cmake
+hostmakedepends="appstream-glib dbus-glib-devel desktop-file-utils gettext
+ glib-devel libxml2-python3 pkg-config python3-lxml util-linux yelp-tools zip"
+makedepends="biblesync-devel dbus-glib-devel gtk+3-devel icu-devel intltool
+ itstool libffi libsoup3-devel libwebkit2gtk41-devel libxml2 libxslt
+ minizip-devel sword-devel zlib"
+depends="biblesync dbus-glib icu icu-libs minizip sword libwebkit2gtk41"
+short_desc="GTK3 Bible tool for reading, study, and research"
+maintainer="jonpikum <jcb@pikum.xyz>"
+license="GPL-2.0-or-later"
+homepage="https://xiphos.org/"
+distfiles="https://github.com/crosswire/xiphos/releases/download/${version}/xiphos-${version}.tar.xz"
+checksum=0c90b2e2112d741e301b4ffa4e1b71e68d59b2d2155d6cb0ec5c875cbc609b9a
